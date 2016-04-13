@@ -1,7 +1,5 @@
 package crystal.dealer.pro.effective.java.factory.methods;
 
-import java.util.HashMap;
-import java.util.Hashtable;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 

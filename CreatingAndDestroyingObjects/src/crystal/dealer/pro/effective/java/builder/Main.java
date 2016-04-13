@@ -4,11 +4,19 @@ public class Main {
 
 	public static void main(String[] args) {
 
-		BuilderInitializedObject object = new BuilderInitializedObject.Builder(
-				10, 43).calories(10).carbohydrate(67).fat(219).sodium(32)
-				.build();
-
-		System.out.println(object.toString());
+		IBuilder<NutritionFacts> nutrBuilder =  new NutritionFacts.Builder(10, 20)
+		.calories(42)
+		.carbohydrate(43)
+		.fat(2134)
+		.sodium(432);
+		
+		IBuilder<PackageFacts> packBuilder = new PackageFacts.Builder()
+		.setHeight(321)
+		.setType("Bottle")
+		.setWeight(342)
+		.setWidth(12);
+		
+		Product p = Factory.buildProduct(nutrBuilder, packBuilder);
 		
 	}
 }

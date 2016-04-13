@@ -1,7 +1,7 @@
 package crystal.dealer.pro.effective.java.builder;
 
 //Builder Pattern
-public class BuilderInitializedObject {
+public class NutritionFacts {
 
 	private final int servingSize;
 	private final int servings;
@@ -10,7 +10,7 @@ public class BuilderInitializedObject {
 	private final int sodium;
 	private final int carbohydrate;
 
-	public static class Builder {
+	public static class Builder implements IBuilder<NutritionFacts>{
 		// Required parameters
 		private final int servingSize;
 		private final int servings;
@@ -45,12 +45,13 @@ public class BuilderInitializedObject {
 			return this;
 		}
 
-		public BuilderInitializedObject build() {
-			return new BuilderInitializedObject(this);
+		@Override
+		public NutritionFacts build() {
+			return new NutritionFacts(this);
 		}
 	}
 
-	private BuilderInitializedObject(Builder builder) {
+	private NutritionFacts(Builder builder) {
 		servingSize = builder.servingSize;
 		servings = builder.servings;
 		calories = builder.calories;
