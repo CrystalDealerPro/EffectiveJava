@@ -134,6 +134,7 @@ public class Main {
 		FactoryMethodSerializable d2 = (FactoryMethodSerializable) deserializeSingleton(f2);
 		Enum d3 = (Enum) deserializeSingleton(f3);
 		
+		
 		d1.printHashCode();
 		d2.printHashCode();
 		d3.printHashCode();

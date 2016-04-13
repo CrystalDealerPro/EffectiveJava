@@ -18,5 +18,6 @@ public class Main {
 		
 		Product p = Factory.buildProduct(nutrBuilder, packBuilder);
 		
+		System.out.println(p.toString());
 	}
 }
