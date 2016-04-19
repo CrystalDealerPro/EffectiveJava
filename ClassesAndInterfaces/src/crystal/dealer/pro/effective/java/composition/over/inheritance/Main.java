@@ -12,6 +12,13 @@ public class Main {
 
 	public static void main(String[] args){
 		
+//		compositionVsInheritance();
+		
+		
+	}
+	
+	private static void compositionVsInheritance(){
+		
 		List<String> elements = new ArrayList<String>(Arrays.asList("Snap", "Crackle", "Pop"));
 		InstrumentedHashSet<String> s = new InstrumentedHashSet<String>();		
 		s.addAll(elements);
@@ -26,6 +33,5 @@ public class Main {
 		
 		System.out.println("Composition count:");
 		System.out.println(s2.getAddCount());
-		
 	}
 }
