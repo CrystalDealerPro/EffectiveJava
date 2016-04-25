@@ -4,12 +4,19 @@ public class Main {
 
 	public static void main(String[] args){
 		
-		CastingClass cc = new CastingClass(432, "CC");
-		CastingInterface ci = new CastingClass(123, "CI");
-		CastingSubclass cs = new CastingSubclass(1, "CS");
-		AnotherCastingClass acc = new AnotherCastingClass();
+//		CastingClass cc = new CastingClass(432, "CC");
+//		CastingInterface ci = new CastingClass(123, "CI");
+//		CastingSubclass cs = new CastingSubclass(1, "CS");
+//		AnotherCastingClass acc = new AnotherCastingClass();
+//		
+//		performUnknownCasts(cc, ci, cs, acc);
 		
-		performUnknownCasts(cc, ci, cs, acc);
+		String str = "literal";
+		Object obj = str;
+		
+		String strObj = (String)obj;
+		
+		System.out.println(strObj);
 		
 	}
 	

@@ -21,8 +21,8 @@ public class Main {
 				}
 				return null;
 				
-			};
-			
+		};
+		
 		String replace1 = sr.replace(rr, text, "\\w+");
 		
 		String replace2 = sr.replace(new ReplacementResolver() {
@@ -40,7 +40,7 @@ public class Main {
 					}
 					return null;
 				}
-			},text, "(\\w+)");
+		},text, "(\\w+)");
 			
 		System.out.println(replace1);		
 		System.out.println(replace2);
