@@ -13,4 +13,12 @@ public interface Shape2D {
 	
 	List<Point> getVertices();
 	
+	@SuppressWarnings("unchecked")
+	default <T extends Shape2D> T returnBigger(T shape){	
+		return this.getField() > shape.getField() ? (T)this : shape;
+	}
+	
+	default Shape2D returnSmaller(Shape2D shape){
+		return this.getField() > shape.getField() ? this : shape;
+	}
 }

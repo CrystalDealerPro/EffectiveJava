@@ -16,6 +16,21 @@ import crystal.dealer.pro.reflection.shapes.Triangle;
 public class Main {
 
 	public static void main(String[] args){
+
+//		methodsReflecting();
+		
+		Circle c = Circle.createCircle(new Point(5, 8), 21);
+		Circle c2 = Circle.createCircle(new Point(2, 2), 1);
+		Rectangle r = Rectangle.createRectangle(new Point(8, 4), new Point(2, 2));
+		Triangle t = Triangle.createTriangle(new Point(8, 4), new Point(2, 2), new Point(0, 1));
+		
+		Circle c3 = c.returnBigger(c2);
+		Circle c4 = (Circle) c.returnSmaller(c2);
+		
+	}
+	
+	
+	private static void methodsReflecting(){
 		
 		List<Object> listOfShapes = new ArrayList<Object>();
 		

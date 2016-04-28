@@ -20,6 +20,7 @@ public class SubstringReplacer {
 			t = t.replace(gr, replacement);
 		}
 		
+		
 		return t;
 	}
 }
